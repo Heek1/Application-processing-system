@@ -2,5 +2,4 @@ fastapi
 uvicorn
 requests
 dotenv
-datetime
 pymongo
