@@ -1,7 +1,5 @@
 fastapi
 uvicorn
 requests
-google-genai
 dotenv
-datetime
 pymongo
