@@ -6,7 +6,7 @@ class User:
     def to_dict(self):
         return{
             'tg_id':self.tg_id,
-            'full_name':self.name,
+            'name':self.name,
             'role':self.role
         }
 class Request:
@@ -21,7 +21,8 @@ class Request:
             'request_id':self.request_id,
             'client_id':self.client_id,
             'text':self.text,
-            'status':self.status
+            'status':self.status,
+            'comments': [c.to_dict() for c in self.comments]
         }
 class Comment:
     def __init__(self, req_id, user_id_tg, text, com_id):
