@@ -49,3 +49,19 @@ class Msg:
             "receiver_id": self.receiver_id,
             "content": self.content
         }
+class User:
+    def __init__(self, tg_id, name):
+        self.tg_id = tg_id
+        self.name = name
+class Client(User):
+    def __init__(self, tg_id, name):
+        super().__init__(tg_id, name)
+        self.role = "Client"
+class Manager(User):
+    def __init__(self, tg_id, name):
+        super().__init__(tg_id, name)
+        self.role = "Manager"
+class Admin(User):
+    def __init__(self, tg_id, name):
+        super().__init__(tg_id, name)
+        self.role = "Admin"
